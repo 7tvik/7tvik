@@ -1,204 +1,213 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Developer Portfolio</title>
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="styleport.css">
-    <script src=""></script>
-    
+    <title>Amazon Project</title>
+    <link rel="stylesheet" href="amz.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
-    <header id="header">
-        <a href="#" class="logo"><i>Portfolio</i></a>
-        <i class='bx bx-menu'></i>
+    <header>
+        <div class="navbar">
+            <div class="nav-logo border">
+                <div class="logo"></div>
+            </div>
 
-        <nav class="navbar">
-            <a href="#home" class="active">Home</a>
-            <a href="#about">About me</a>
-            <a href="#Services">Services</a>
-            <a href="#project">Project</a>
-            <a href="#contact">Contact us</a>
-        </nav>
+            <div class="nav-address border">
+                <p class="add-1">Deliver to </p>
+                <div class="add-icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p class="add-2">India</p>
+                </div>
+            </div>
+
+
+            <div class="nav-search">
+                <select class="search-select">
+                    <option>All</option>
+                </select>
+                <input type="text" placeholder="Search Amazon" class="search-input" />
+                <div class="search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+
+
+            <div class="nav-signin border">
+                <p><span>Hello, sign in</span></p>
+                <p class="nav-second">Account & list</p>
+            </div>
+
+            <div class="nav-return border">
+                <p><span>Returns</span></p>
+                <p class="nav-second">& orders</p>
+            </div>
+
+            <div class="nav-cart border">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Cart
+            </div>
+        </div>
+
+
+
+        <div class="panel">
+            <div class="pnael-all border">
+                <i class="fa-solid fa-bars"></i>
+                All
+            </div>
+            <div class="panel-ops">
+                <p class="border">Today's Deals</p>
+                <p class="border">Customer Service</p>
+                <p class="border">Registry</p>
+                <p class="border">Gift Cards</p>
+                <p class="border">Sell</p>
+
+            </div>
+
+            <div class="panel-deals">
+                <pre> Shop   Deals in Electronics </pre>
+            </div>
+        </div>
     </header>
 
-    <!-- HOME SECTION DESIGN -->
-    <section class="home" id="home">
-        <div class="home-container">
-            <h3>Hello, hope you doing well !!! This is</h3>
-            <h1>SATVIK AGRE</h1>
-            <h3>And I'm a <span>Web Developer</span></h3>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa rerum, possimus facere non doloribus
-                praesentium enim officia adipisci cumque atque libero quibusdam nobis. Reiciendis tempora odio ipsam!
-                Doloribus, ipsa beatae!</p>
-            <div class="social-media">
-                <a href="#"><i class='bx bxl-meta'></i></a>
-                <a href="#"><i class='bx bxl-instagram'></i></a>
-                <a href="#"><i class='bx bxl-twitter'></i></a>
-                <a href="#"><i class='bx bxl-youtube'></i></a>
-            </div>
-            <a href="collageboy.jpg" class="btn" download="">Download cv</a>
-        </div>
+    <!-- /** Hero section **/ -->
 
-        <div class="home-image">
-            <img src="collegeboypng.png" alt="image">
-        </div>
-        <div class="circle"></div>
-    </section>
-
-    <!-- About section design -->
-    <section class="about" id="about">
-        <div class="about-img">
-            <img src="collegeboypng.png" alt="png">
-        </div>
-        <div class="about-container">
-            <h2 class="heading">
-                About <span>Me</span>
-            </h2>
-            <h3>Frontend Developer</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi fugiat rem sapiente corporis, amet
-                incidunt iure inventore hic rerum voluptates ad vel officia dolor id! Quae asperiores rem eaque sunt.
+    <div class="hero-section">
+        <div class="hero-message">
+            <p>
+                You are on an amazon.com. You also shop on Amazon India for millions of products with fast local
+                delivery. <a href="https://amazon.in">Click here to go amazon.in</a>
             </p>
-            <a href="#" class="btn">Read More</a>
         </div>
-    </section>
+    </div>
 
-    <!-- services section design -->
-    <section class="services" id="Services">
-        <h2 class="heading">Our <span>Services</span></h2>
-
-        <div class="services-container">
-            <div class="services-box">
-                <i class='bx bx-code'></i>
-                <h3>Web Developer</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem ducimus vel beatae quisquam eius,
-                    tempore iure! Dicta, amet molestiae. Aliquam autem veniam quae, atque distinctio consequuntur quas?
-                </p>
-                <a href="#" class="btn">Read More</a>
-            </div>
-
-            <div class="services-box">
-                <i class='bx bxs-videos'></i>
-                <h3>Video Editor</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem ducimus vel beatae quisquam eius,
-                    tempore iure! Dicta, amet molestiae. Aliquam autem veniam quae, atque distinctio consequuntur quas?
-                </p>
-                <a href="#" class="btn">Read More</a>
-            </div>
-
-            <div class="services-box">
-                <i class='bx bxs-paint'></i>
-                <h3>Graphic Designer</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem ducimus vel beatae quisquam eius,
-                    tempore iure! Dicta, amet molestiae. Aliquam autem veniam quae, atque distinctio consequuntur quas?
-                </p>
-                <a href="#" class="btn">Read More</a>
-            </div>
-
-            <div class="services-box">
-                <i class='bx bx-bar-chart-alt'></i>
-                <h3>Digital Marketing</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem ducimus vel beatae quisquam eius,
-                    tempore iure! Dicta, amet molestiae. Aliquam autem veniam quae, atque distinctio consequuntur quas?
-                </p>
-                <a href="#" class="btn">Read More</a>
+    <div class="shop-section">
+        <div class="box1 box">
+            <div class="box-content">
+                <h2>Clothes</h2>
+                <div class="box-image" style="background-image: url('box1_image.jpg');"></div>
+                <p><a href="https://google.com" class="see-more">See more</a></p>
             </div>
         </div>
-    </section>
-
-    <!-- project section(portfolio) -->
-
-    <section class="project" id="project">
-        <h2 class="heading">Latest <span>Projects</span></h2>
-
-        <div class="portfolio-container">
-            <div class="portfolio-box">
-                <img src="web pf.jpg" alt="">
-                <div class="pottfolio-layer">
-                    <h4>Web Design</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum qui eos impedit ex perspiciatis
-                        commodi! Ratione, quasi asperiores?</p>
-                    <a href="#"><i class='bx bx-link-external'></i></a>
-                </div>
-            </div>
-
-            <div class="portfolio-box">
-                <img src="video pf.jpg" alt="">
-                <div class="pottfolio-layer">
-                    <h4>Video Editor</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum qui eos impedit ex perspiciatis
-                        excepturi
-                        commodi! Ratione, quasi asperiores?</p>
-                    <a href="#"><i class='bx bx-link-external'></i></a>
-                </div>
-            </div>
-
-
-            <div class="portfolio-box">
-                <img src="grafics pf1.jpg" alt="">
-                <div class="pottfolio-layer">
-                    <h4>Graphic Designer</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum qui eos impedit ex
-                        perspiciatis
-                        commodi! Ratione, quasi asperiores?</p>
-                    <a href="#"><i class='bx bx-link-external'></i></a>
-                </div>
-            </div>
-
-            <div class="portfolio-box">
-                <img src="digital pf.jpg" alt="">
-                <div class="pottfolio-layer">
-                    <h4>Digital Marketing</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum qui eos impedit ex
-                        perspiciatis
-                        commodi! Ratione, quasi asperiores?</p>
-                    <a href="#"><i class='bx bx-link-external'></i></a>
-                </div>
-            </div>
-
-            <div class="portfolio-box">
-                <img src="digital pf.jpg" alt="">
-                <div class="pottfolio-layer">
-                    <h4>Digital Marketing</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum qui eos impedit ex
-                        commodi! Ratione, quasi asperiores?</p>
-                    <a href="#"><i class='bx bx-link-external'></i></a>
-                </div>
-            </div>
-
-            <div class="portfolio-box">
-                <img src="digital pf.jpg" alt="">
-                <div class="pottfolio-layer">
-                    <h4>Digital Marketing</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum qui eos impedit ex
-                        commodi! Ratione, quasi asperiores?</p>
-                    <a href="#"><i class='bx bx-link-external'></i></a>
-                </div>
+        <div class="box1 box">
+            <div class="box-content">
+                <h2>Health & Personal Care</h2>
+                <div class="box-image" style="background-image: url('box2_image.jpg');"></div>
+                <p><a href="https://google.com" class="see-more">See more</a></p>
             </div>
         </div>
-    </section>
+        <div class="box1 box">
+            <div class="box-content">
+                <h2>Ferniture</h2>
+                <div class="box-image" style="background-image: url('box3_image.jpg');"></div>
+                <p><a href="https://google.com" class="see-more">See more</a></p>
+            </div>
+        </div>
+        <div class="box1 box">
+            <div class="box-content">
+                <h2>Mobile & Gadgets</h2>
+                <div class="box-image" style="background-image: url('box4_image.jpg');"></div>
+                <p><a href="https://google.com" class="see-more">See more</a></p>
+            </div>
+        </div>
+        <div class="box1 box">
+            <div class="box-content">
+                <h2>Beauty Products</h2>
+                <div class="box-image" style="background-image: url('box5_image.jpg');"></div>
+                <p><a href="https://google.com" class="see-more">See more</a></p>
+            </div>
+        </div>
+        <div class="box1 box">
+            <div class="box-content">
+                <h2>Pet Care</h2>
+                <div class="box-image" style="background-image: url('box6_image.jpg');"></div>
+                <p><a href="https://google.com" class="see-more">See more</a></p>
+            </div>
+        </div>
+        <div class="box1 box">
+            <div class="box-content">
+                <h2>New Arrivals in Toys</h2>
+                <div class="box-image" style="background-image: url('box7_image.jpg');"></div>
+                <p><a href="https://google.com" class="see-more">See more</a></p>
+            </div>
+        </div>
+        <div class="box1 box">
+            <div class="box-content">
+                <h2>Fashion Trends</h2>
+                <div class="box-image" style="background-image: url('box8_image.jpg');"></div>
+                <p><a href="https://google.com" class="see-more">See more</a></p>
+            </div>
+        </div>
 
-    <!-- contact designs -->
-    <section class="contact" id="contact">
-        <h2 class="heading">Contact <span>Me</span></h2>
-        <form action="#">
+    </div>
 
-            <div class="input-box">
-                <input type="text" placeholder="Full Name" required>
+    <footer>
+        <div class="footer-panel1">
+            <a href="#"> Back to Top </a>
+        </div>
+
+        <div class="foot-panel2">
+            <ul>
+                <p>Get to know us</p>
+                <a href="#">Careers</a>
+                <a href="#">Blogs</a>
+                <a href="#">About Amazon</a>
+                <a href="#">Investor Relations</a>
+                <a href="#">Amazon Devices</a>
+                <a href="#">Amazon Science</a>
+            </ul>
+            <ul>
+                <p>Get to know us</p>
+                <a href="#">Careers</a>
+                <a href="#">Blogs</a>
+                <a href="#">About Amazon</a>
+                <a href="#">Investor Relations</a>
+                <a href="#">Amazon Devices</a>
+                <a href="#">Amazon Science</a>
+            </ul>
+            <ul>
+                <p>Get to know us</p>
+                <a href="#">Careers</a>
+                <a href="#">Blogs</a>
+                <a href="#">About Amazon</a>
+                <a href="#">Investor Relations</a>
+                <a href="#">Amazon Devices</a>
+                <a href="#">Amazon Science</a>
+            </ul>
+            <ul>
+                <p>Get to know us</p>
+                <a href="#">Careers</a>
+                <a href="#">Blogs</a>
+                <a href="#">About Amazon</a>
+                <a href="#">Investor Relations</a>
+                <a href="#">Amazon Devices</a>
+                <a href="#">Amazon Science</a>
+            </ul>
+        </div>
+
+        <div class="footer-panel3">
+            <div class="logo-1"></div>
+        </div>
+
+        <div class="foot-panel4">
+            <div class="pages">
+                <a href="#">conditions of use</a>
+                <a href="#">Privacy Notice</a>
+                <a href="#">Your Ads Privacy Choices</a>
             </div>
 
-            <div class="input-box">
-                <input type="tel important" placeholder="Mobile number" required>
-                <input type="email" placeholder="Email Subject" required>
+            <div class="copyright">
+                1996-2023, Amazon.com, Inc. or its affiliates
             </div>
+        </div>
+    </footer>
 
-            <textarea name="" id="" cols="50" rows="20" placeholder="Your Message "></textarea>
-            <input type="submit" value="send Message" class="btn">
-        </form>
-    </section>
 </body>
 
 </html>
