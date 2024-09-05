@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            outline: none;
+            border: none;
+            text-decoration: none;
+            scroll-behavior: smooth;
+        }
+
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #777;
+        }
+        .calbox {
+            width: 300px;
+            padding: 10px;
+            background-color: #333;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .screen1 {
+            height: 100px;
+        }
+        .screen {
+            width: 100%;
+            height: 80%;
+            background-color: #fff;
+            color: #222;
+            text-align: right;
+            border: none;
+            margin-bottom: 10px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 24px;
+            box-sizing: border-box;
+        }
+        .keybox {
+            display:grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 10px;
+        }
+        .key {
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            user-select: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .key:hover {
+            background-color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="calbox">
+        <div class="screen1">
+            <input type="text" class="screen" readonly>
+        </div>
+        <div class="keybox">
+            <div class="key">7</div>
+            <div class="key">8</div>
+            <div class="key">9</div>
+            <div class="key">/</div>
+            
+            <div class="key">4</div>
+            <div class="key">5</div>
+            <div class="key">6</div>
+            <div class="key">*</div>
+            
+            <div class="key">1</div>
+            <div class="key">2</div>
+            <div class="key">3</div>
+            <div class="key">-</div>
+
+            <div class="key">0</div>
+            <div class="key">.</div>
+            <div class="key">C</div>
+            <div class="key">+</div>
+        </div>
+        <div class="key" style="margin-top: 7px;">=</div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded',function() {
+            const screen = document.querySelector('.screen');
+            const keys = document.querySelectorAll('.key');
+
+            let currentInput =''; // current input on screen
+            let operator = '';
+            let firstOperand = '';
+            let secondOperand = '';
+
+            keys.forEach(key=>{
+                key.addEventListener('click',function() {
+                    const keyValue = key.textContent;
+
+                    // if = press calculate result
+                    if(keyValue === '=') {
+                        if(firstOperand && operator && currentInput) {
+                            secondOperand = currentInput;
+                            screen.value = calculate(firstOperand, secondOperand, operator);
+                            currentInput = screen.value;
+                            operator='';
+                            firstOperand='';
+                            secondOperand-'';
+                        }
+                    }
+                    else if(keyValue === 'C') {
+                        screen.value='';
+                        currentInput='';
+                        operator='';
+                        firstOperand='';
+                        secondOperand='';
+                    }
+                    else if(keyValue === '+' || keyValue === '-' || keyValue === '*' || keyValue === '/') {
+                        if(currentInput) {
+                            if(!firstOperand){
+                                firstOperand = currentInput;
+                                operator = keyValue;
+                                currentInput='';
+                            }
+                            else if(firstOperand && currentInput) {
+                                secondOperand = currentInput;
+                                screen.value = calculate(firstOperand, secondOperand, operator);
+                                firstOperand = screen.value;
+                                operator=keyValue;
+                                currentInput='';
+                            }
+                        }
+                    }
+                    else {
+                        currentInput += keyValue;
+                        screen.value = currentInput;
+                    }
+                });
+            });
+            function calculate(operand1, operand2, operand3) {
+                const num1 = parseFloat(operand1);
+                const num2 = parseFloat(operand2);
+
+                let result = 0;
+
+                switch(operator) {
+                    case '+':
+                        result = num1 + num2;
+                        break;
+                    case '-':
+                        result = num1 - num2;
+                        break;
+                    case '*':
+                        result = num1 * num2;
+                        break;
+                    case '/':
+                        result = num2 !==0 ? num1 / num2: 'Error';
+                        break;    
+                }
+                return result.toString();
+            }
+        });
+    </script>
+</body>
+</html>
